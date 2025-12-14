@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  background-color: #e2f5cc;
+  color: #000;
+  padding: 20px;
+  text-align: center;
+  flex-direction: row;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 5px;
+  align-items: center;
+  grid-area: auto;
+}
+.menu .logo img {
+  width: 50px;
+  height: auto;
+  border-radius: 20px;
+}
+.menu li a {
+  text-decoration: none;
+  font-family: "Krona One", sans-serif;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.menu li a:hover {
+  background-color: #d8edc0;
+  color: #000;
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+.menu li.logo a:hover {
+  background-color: transparent;
+  color: inherit;
+  transform: none;
+}
+
+body {
+  background-color: #f4ecd8;
+  font-family: "Nunito", sans-serif;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.higiene ::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin-top: 8px;
+  background-color: #e2f5cc;
+  border-radius: 2px;
+}
+main {
+  font-family: "Nunito", sans-serif;
+}
+footer {
+  background-color: #e2f5cc;
+  color: #333;
+  margin-top: auto;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: "nunito", sans-serif;
+  font-size: 14px;
+  z-index: 1000;
+}
+@media (max-width: 600px) {
+  .menu ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .menu li a {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+/*estilos para producto*/
+.filtrobar h4 {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.filtrobar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtrobar ul li p:hover {
+  color: #000;
+  transition: 0.3s ease;
+  transform: scale(1.05);
+}
+.productos ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  overflow-x: auto;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+.productos ul li img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+.higiene ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: auto;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: auto;
+}
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  position: relative;
+}
+/* scrollll*/
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to left, #f4ecd8, rgba(244, 236, 216, 0));
+  pointer-events: none;
+}
+.scroll-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 60px;
+  height: 100%;
+
+  background: linear-gradient(to right, #f4ecd8, rgba(244, 236, 216, 0));
+
+  pointer-events: none;
+}
