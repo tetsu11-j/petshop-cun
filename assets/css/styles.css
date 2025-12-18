@@ -88,7 +88,7 @@ footer {
   z-index: 1000;
 }
 @media (max-width: 1024px) {
-  .menu{
+  .menu {
     position: static;
   }
   .menu ul {
@@ -127,15 +127,12 @@ footer {
   transition: 0.3s ease;
   transform: scale(1.05);
 }
-.productos ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  overflow-x: auto;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: nowrap;
-  list-style: none;
+article {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .productos ul li img {
   width: 200px;
@@ -210,13 +207,13 @@ h1 {
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card h2 {
@@ -274,7 +271,7 @@ h1 {
 }
 
 .content {
-  border: 2px solid rgba(228, 215, 215, 0.075); 
+  border: 2px solid rgba(228, 215, 215, 0.075);
   height: 200px;
   overflow: hidden;
   resize: both;
@@ -290,7 +287,6 @@ h1 {
 }
 
 .card img:hover {
-  transform: scale(1.10); 
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2); 
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
