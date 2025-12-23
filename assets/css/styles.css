@@ -102,13 +102,13 @@ footer {
 }
 /*estilos para producto*/
 .filtrobar h4 {
-  text-align: right;
+  text-align: center;
   margin-bottom: 10px;
 }
 .filtrobar ul {
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   gap: 16px;
@@ -161,6 +161,79 @@ article {
   flex-wrap: nowrap;
   position: relative;
 }
+
+.scroll-container .producto1 {
+  display:inline-block;
+  width: 250px;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.scroll-container .productoju {
+  display:inline-block;
+  width: 250px;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.scroll-container .productocya {
+  display:inline-block;
+  width: 250px;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.scroll-container .productohi {
+  display:inline-block;
+  width: 250px;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.scroll-container .productoac {
+  display:inline-block;
+  width: 250px;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.scroll-container .productome {
+  display:inline-block;
+  width: 250px;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
 /* scrollll*/
 .scroll-container::after {
   content: "";
@@ -290,3 +363,5 @@ h1 {
   transform: scale(1.1);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+
