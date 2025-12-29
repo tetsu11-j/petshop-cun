@@ -6,12 +6,14 @@
 /* ====== Variables CSS ====== */
 :root {
   /* Colores */
-  --fondo-gradiente: linear-gradient(135deg, #a8e6cf, #dcedc1);
+  --fondo-gradiente: linear-gradient(to bottom, #a8e6cf,#dcedc1 ); /* degradado verde suave */
   --color-primario: #a8e6cf; /* verde suave */
   --color-secundario: #56c596; /* verde más fuerte */
-  --color-acento: #ffb703; /* amarillo cálido (botones) */
+  --color-terciario: #fff; /* blanco para los productos*/
+  --color-acento: #9be9d7; /* amarillo cálido (botones) */
   --color-texto: #2f3e46; /* gris oscuro */
   --color-fondo-claro: #ffffff;
+  /* Tipografía */
   --fuente-titulo: "Krona One", sans-serif;
   --fuente-texto: "Nunito", sans-serif;
 }
@@ -24,6 +26,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: var(--color-primario);
 }
 .menu ul {
   display: flex;
@@ -34,6 +37,7 @@
   gap: 5px;
   align-items: center;
   grid-area: auto;
+  background-color: var(--fondo-gradiente);
 }
 .menu .logo img {
   width: 50px;
@@ -94,6 +98,7 @@ footer {
 @media (max-width: 1024px) {
   .menu {
     position: static;
+    background-color: var(--fondo-gradiente);
   }
   .menu ul {
     flex-direction: column;
@@ -105,14 +110,8 @@ footer {
   }
 }
 /* ====== Estilos de inicio ====== */
-.inicio {
-  text-align: center;
-  padding: 40px;
-  justify-content: center;
-  align-items: center;
-}
 
-.hero {
+.inicio {
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -121,24 +120,24 @@ footer {
   padding: 40px 20px;
 }
 
-.hero-content {
+.contenido-inicio {
   max-width: 700px;
 }
 
-.hero h1 {
+.inicio h1 {
   font-family: var(--fuente-titulo);
   font-size: 3rem;
   margin-bottom: 15px;
 }
 
-.hero p {
+.inicio p {
   font-family: var(--fuente-secundaria);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
-.hero-buttons {
+.botones-inicio {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -154,29 +153,7 @@ footer {
   }
 }
 
-/*estilos para botones*/
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: var(--color-acento);
-  color: #000;
-  cursor: pointer;
-  font-weight: 600;
-  border: none;
-  text-align: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3 ease;
-  text-decoration: none;
-  margin: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-.btn:hover {
-  background-color: #d8edc0;
-  transform: scale(1.05);
-}
-
-/*estilos para producto*/
+/* ====== estilos para producto ====== */
 .filtrobar h4 {
   text-align: center;
   margin-bottom: 10px;
@@ -192,7 +169,7 @@ footer {
   list-style: none;
   font-size: 15px;
   font-weight: bold;
-  color: #333;
+  color: var(--color-texto);
   text-align: right;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -204,49 +181,197 @@ footer {
   transform: scale(1.05);
 }
 
-.scroll-container {
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+.producto {
+  background: var(--color-terciario);
+  border-radius: 12px 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.producto img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.producto h2 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+.producto .descripcion {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-weight: 13px;
+  text-align: center;
+}
+.producto .botones {
   display: flex;
   flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.producto button {
+  background-color: var(--color-acento);
+  color: var(--fuente-texto);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3 ease;
+  text-decoration: none;
+  margin: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 100px;
+  min-width: 100px;
+  text-align: center;
+}
+.producto button:hover {
+  background-color: #d8edc0;
+  transform: scale(1.05);
+}
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 768px) {
+  .productos-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+  }
+  .producto {
+    min-width: 260px;
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+}
+
+/* ====== estilos para adopción ===== */
+
+.cards-adop {
+  padding: 10px;
+}
+.card-adop {
+  display: flex;
+  background: #fff;
+  border: 4px solid #e2f5cc;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  gap: 15px;
+}
+
+.card-adop:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.Title-adop {
+  font-size: 14px;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  font-size: 2rem;
+  padding: 20px;
+  color: #555;
+}
+.card-content {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.card-content h2 {
+  font-family: "Fredoka", sans-serif;
+}
+
+.info {
+  display: inline-flex;
+  justify-content: space-between;
   gap: 20px;
-  list-style: none;
-  overflow-x: auto;
-  overflow-y: hidden;
-  flex-wrap: nowrap;
-  position: relative;
 }
 
-/* scrollll*/
-.scroll-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 100%;
-  background: linear-gradient(to left, #f4ecd8, rgba(244, 236, 216, 0));
-  pointer-events: none;
+.left,
+.right {
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  margin-top: 15px;
+  margin-right: 90px;
+  margin-right: 90px;
+  margin-bottom: 15px;
 }
-.scroll-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
 
-  width: 60px;
-  height: 100%;
+.btn {
+  background: #8fc552;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-  background: linear-gradient(to right, #f4ecd8, rgba(244, 236, 216, 0));
+@media (max-width: 768px) {
+  .cards-adop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-  pointer-events: none;
+  .card-img {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
 }
 
 /* ====== Estilos de Servicios ====== */
 
 h1 {
-  font-family: "Krona One", sans-serif;
+  font-family: var(--fuente-titulo);
   text-align: center;
   margin: 30px 0;
-  color: #333;
+  color: var(--color-texto);
   font-size: 2.2rem;
 }
 
@@ -345,99 +470,9 @@ h1 {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* estilos para dopcion */
+/* ====== Estilos de Blog ====== */
 
-.cards-adop {
-  padding: 10px;
-}
-.card-adop {
-  display: flex;
-  background: #fff;
-  border: 4px solid #e2f5cc;
-  border-radius: 10px;
-  max-width: 900px;
-  width: 100%;
-  margin: 20px auto;
-  padding: 15px;
-  gap: 15px;
-}
+/* ===== Estilos Sobre Nosotros ====== */
 
-.card-adop:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
+/* ===== Estilos Contacto ====== */
 
-.card-img {
-  width: 250px;
-  max-width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.Title-adop {
-  font-size: 14px;
-  text-align: center;
-  font-family: "Fredoka", sans-serif;
-  font-size: 2rem;
-  padding: 20px;
-  color: #555;
-}
-.card-content {
-  flex: 1;
-  padding-left: 20px;
-}
-
-.card-content h2 {
-  font-family: "Fredoka", sans-serif;
-}
-
-.info {
-  display: inline-flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.left,
-.right {
-  font-size: 14px;
-  font-family: "Nunito", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #555;
-  margin-top: 15px;
-  margin-right: 90px;
-  margin-right: 90px;
-  margin-bottom: 15px;
-}
-
-.btn {
-  background: #e2f5cc;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .cards-adop {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .card-img {
-    width: 100%;
-    max-height: 250px;
-  }
-
-  .info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-  }
-}
