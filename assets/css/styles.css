@@ -491,7 +491,72 @@ h1 {
 }
 
 /* ====== Estilos de Blog ====== */
+.Blog{
+  display:flex;
+  justify-content: space-between;
+}
 
+.Pets{
+  box-sizing: border-box !important;
+  text-align: center;
+  padding: 40px;
+  background-color: gray;
+  width: 50%;
+  margin: 0%;
+}
+
+.AttentionDay{
+  box-sizing: border-box !important;
+    text-align: center;
+    padding: 40px;
+    width: 50%;
+    background-color: beige;
+    margin: 0%;
+}
+
+.adoptOld{
+    text-align: center;
+    padding: 200px;
+    background-image: url('/assets/img/adopcion/old-dog.jpg');
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    color: white;
+    font-size: large;
+}
+
+.adoptOld a{
+    color:white;
+    transition: 1s color;
+    font-size: x-large;
+}
+
+.adoptOld a:hover{
+    color: blue;
+    font-size: x-large;
+}
+.container2{
+  display:flex;
+  justify-content: space-between;
+}
+
+.housePet{
+  box-sizing: border-box !important;
+  text-align: left;
+  padding: 40px;
+  background-color: beige;
+  width: 50%;
+  margin: 0%;
+}
+
+.tips{
+  box-sizing: border-box !important;
+    text-align: center;
+    padding: 40px;
+    width: 50%;
+    background-color: gray;
+    margin: 0%;
+}
 /* ===== Estilos Sobre Nosotros ====== */
 
 /* ===== Estilos Contacto ====== */
