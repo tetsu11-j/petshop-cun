@@ -6,14 +6,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Yellowtail&display=swap" rel="stylesheet">
     <title>Document</title>
   </head>
   <body>
@@ -30,32 +23,57 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="nosotros.html">Sobre nosotros</a></li>
           <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="#">🛒</a></li>
         </ul>
       </nav>
     </header>
     <main class="hero">
-    <h2>Contacto</h2>
-    <section class="contacto">
-      <p>
-        Estamos aquí para ayudarte, si tienes preguntas, deseas mas información
-        sobre nuestros productos o servicios, o necesitas asesoría sobre tu
-        mascota, no dudes en comunicarte con nosotros <br />
-        Nuestro equipo estará encantado de atenderte y brindarte una respuesta
-        oportuna.
-      </p>
-      <ul class="informacion">
+      <h1>Contacto</h1>
+      <section class="contacto">
+        <p>
+          Estamos aquí para ayudarte, si tienes preguntas, deseas mas
+          información sobre nuestros productos o servicios, o necesitas asesoría
+          sobre tu mascota, no dudes en comunicarte con nosotros <br />
+          Nuestro equipo estará encantado de atenderte y brindarte una respuesta
+          oportuna.
+        </p>
+        <section class="info-contacto">
         <h3>Información de contacto</h3>
-        <li><strong>Email:</strong>6uK5Q@example.com</li>
-        <li><strong>Teléfono:</strong> 123-456-789</li>
-        <li>
-          <strong>Horario de atención:</strong> Lunes a Sábado, de 09:00 a.m. -
-          06:00 p.m.
-        </li>
-        <li><strong>Ubicación:</strong>Colombia</li>
-      </ul>
-    </section>
-  </main>
+        <ul class="informacion">
+          <li><strong>Email:</strong>6uK5Q@example.com</li>
+          <li><strong>Teléfono:</strong> 123-456-789</li>
+          <li>
+            <strong>Horario de atención:</strong> Lunes a Sábado, de 09:00 a.m.
+            - 06:00 p.m.
+          </li>
+          <li><strong>Ubicación:</strong>Colombia</li>
+        </ul>
+      </section>
+      <section class="formulario-contacto">
+        <h3>Escribenos</h2>
+        <p>
+          Si tienes alguna pregunta o sugerencia, no dudes en ponerte en
+          contacto con nosotros en el siguiente formulario
+        </p>
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <p>Gracias por comunicarte con nosotros</p>
+      </section>
+      <section class="redes">
+        <h3>Encontranos en nuestras redes sociales</h3>
+        <ul>
+          <li><a href="#"> Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </section>
+    </main>
     <footer>
       <p>Derechos reservados © 2025</p>
     </footer>
