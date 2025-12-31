@@ -6,11 +6,7 @@
 /* ====== Variables CSS ====== */
 :root {
   /* Colores */
-  --fondo-gradiente: linear-gradient(
-    to bottom,
-    #a8e6cf,
-    #dcedc1
-  ); /* degradado verde suave (fondo)*/
+  --fondo-gradiente: linear-gradient(to bottom, #a8e6cf, #dcedc1); /* degradado verde suave (fondo)*/
   --color-primario: #a8e6cf; /* verde suave */
   --color-secundario: #56c596; /* verde más fuerte */
   --color-terciario: #fff; /* blanco para los productos*/
